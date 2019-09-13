@@ -243,7 +243,7 @@ public class Croupier extends Jugador{
 			pedirApuestas();
 			//Reparto inicial, 2 cartas a cada jugador
 			repartir();
-			System.out.println("\n******* Ronda 1 *******");
+			System.out.println("\n ******* Ronda 1 *******");
 			boolean otraRonda = true, band;
 			this.toString();
 			//Ejecuta el turno inicial.
