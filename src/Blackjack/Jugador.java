@@ -20,7 +20,7 @@ public class Jugador {
 	protected double dinero;
 	protected double apuesta;
 	protected EstadoJuego estadoJuego;
-    protected String nombre;
+	protected String nombre;
 
 	public String getNombre() {
 		return nombre;
@@ -116,14 +116,14 @@ public class Jugador {
 		}
 		return puntaje;
 	}
-	
+
 	public String toString () {
 		String cad = "";
 		for(Carta c: mano)
 			cad += c.toString() + " ";
-		return cad; 
+		return cad;
 	}
-	
+
 	public void aniadirDinero (double cantidad) {
 		if(dinero < 0 ) {
 			dinero = 0;
@@ -131,31 +131,31 @@ public class Jugador {
 		}
 		dinero += cantidad;
 	}
-	
+
 	public void quitarDinero (double cantidad) {
 		dinero -= cantidad;
 	}
-	
+
 	public double getDinero(){
 		return dinero;
 	}
-	
+
 	public void aniadirCarta(Carta carta){
 		mano.add(carta);
 	}
-	
+
 	public Carta quitarCarta(int i) {
 		return mano.get(i);
 	}
-	
+
 	public void resetMano() {
 		mano = new ArrayList<Carta>();
 	}
-	
+
 	public void setApuesta(double apuesta) {
 		this.apuesta = apuesta;
 	}
-	//Agregado VB
+
 	public double getApuesta() {
 		return apuesta;
 	}

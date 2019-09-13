@@ -21,18 +21,18 @@ import java.util.*;
 public class BarajaAmericana {
 	private ArrayList<Carta> baraja;
 	private boolean joker;
-	
+
 	public BarajaAmericana() {
 		baraja = new ArrayList<Carta>();
 		crearBaraja();
 	}
-	
+
 	public BarajaAmericana(boolean joker) {
 		baraja = new ArrayList<Carta>();
 		joker = true;
 		crearBarajaCompleta();
 	}
-	
+
 	public void reset() {
 		baraja = new ArrayList<Carta>();
 		if(joker)
@@ -40,15 +40,15 @@ public class BarajaAmericana {
 		else
 			crearBaraja();
 	}
-	
+
 	public Carta sacarCarta() {
 		return baraja.remove(0);
 	}
-	
+
 	public void revolver() {
 		Collections.shuffle(baraja);
 	}
-	
+
 	private void crearBaraja() {
 		Figura [] fig = Figura.values();
 		Valor [] val = Valor.values();
@@ -58,7 +58,7 @@ public class BarajaAmericana {
 			}
 		}
 	}
-	
+
 	private void crearBarajaCompleta() {
 		Figura [] fig = Figura.values();
 		Valor [] val = Valor.values();
@@ -70,7 +70,7 @@ public class BarajaAmericana {
 		baraja.add(new Carta(Figura.JOKER,Valor.TODOS));
 		baraja.add(new Carta(Figura.JOKER,Valor.TODOS));
 	}
-	
+
 	public String toString() {
 		String cad = "";
 		for(Carta car: baraja)
